@@ -24,7 +24,9 @@ class MicroGallery {
     $images = $this->getImages();
     foreach ( $images as $item ) {
       $tmp = $templateItem;
-      $html[] = preg_replace("/\[\[image_path\]\]/", $this->imgDir.$item, $tmp);
+      $tmp = preg_replace("/\[\[image_path\]\]/", $this->imgDir.$item, $tmp);
+      $tmp = preg_replace("/\[\[image_name\]\]/", $item, $tmp);
+      $html[] = $tmp;
     }
     echo implode($html);
   }
