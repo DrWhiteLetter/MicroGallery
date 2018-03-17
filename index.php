@@ -16,7 +16,7 @@
 <head>
 <body>
 
-  <div class="container">
+  <div id="page" class="container">
     <div class="row">
       <?php
       include __DIR__."/class/MicroGallery.php";
