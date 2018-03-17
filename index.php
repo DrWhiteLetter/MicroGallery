@@ -12,12 +12,17 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
-
+  <title>MicroGallery</title>
 <head>
 <body>
 
   <div id="page" class="container">
+
+    <!-- Headline -->
+    <h1>MicroGallery</h1>
+
     <div class="row">
+      <!-- Init and start the MicroGallery -->
       <?php
       include __DIR__."/class/MicroGallery.php";
       $g = new MicroGallery();
