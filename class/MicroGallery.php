@@ -20,7 +20,7 @@ class MicroGallery {
 
   function showGallery() {
     $html = array();
-    $templateItem = file_get_contents($this->$templDir."imageItem.html");
+    $templateItem = file_get_contents($this->templDir."imageItem.html");
     $images = $this->getImages();
     foreach ( $images as $item ) {
       $tmp = $templateItem;
