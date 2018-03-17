@@ -16,7 +16,7 @@ class MicroGallery {
         $images[] = $file;
       }
     }
-    if ( $this->$sortReverse ) {
+    if ( $this->sortReverse ) {
       $images = array_reverse($images);
     }
     return $images;
