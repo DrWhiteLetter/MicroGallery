@@ -3,6 +3,7 @@
 class MicroGallery {
   public $imgDir = 'img/';
   public $templDir = 'templates/';
+  public $sort = "reverse";
 
   function getImages() {
     $images = array();
@@ -14,6 +15,9 @@ class MicroGallery {
       if ( in_array($fExt, $extensions) ) {
         $images[] = $file;
       }
+    }
+    if ( $this->sort == "reverse" ) {
+      $images = array_reverse($images);
     }
     return $images;
   }
