@@ -3,7 +3,7 @@ class MicroGallery {
   public $templdir = '../templates/';
 
   function getImages() {
-
+    echo "hallo Welt";
   }
 
   function showGallery() {
