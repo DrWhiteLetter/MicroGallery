@@ -1,5 +1,10 @@
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/microGallery.css">
 
@@ -11,11 +16,15 @@
 <head>
 <body>
 
-<?php
-include __DIR__."/class/MicroGallery.php";
-$g = new MicroGallery();
-$g->showGallery();
-?>
+  <div class="container">
+    <div class="row">
+      <?php
+      include __DIR__."/class/MicroGallery.php";
+      $g = new MicroGallery();
+      $g->showGallery();
+      ?>
+    </div>
+  </div>
 
 </body>
 </html>
