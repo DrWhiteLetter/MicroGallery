@@ -1,8 +1,8 @@
 <?php
 
 class MicroGallery {
-  public $imgDir = '../img/';
-  public $templdir = '../templates/';
+  public $imgDir = 'img/';
+  public $templdir = 'templates/';
 
   function getImages() {
     $images = array();
@@ -19,7 +19,13 @@ class MicroGallery {
   }
 
   function showGallery() {
+    $html = array();
+    $templateItem = file_get_contents($this->templates."imageItem.html");
     $images = $this->getImages();
-    var_dump($images);
+    foreach ( $images as $item ) {
+      $tmp = $templateItem;
+      $html[] = preg_replace("[[image]]", $item, $tmp);
+    }
+    echo implode($html);
   }
 }
