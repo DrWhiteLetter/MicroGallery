@@ -35,6 +35,7 @@ class MicroGallery {
       $html[] = $tmp;
 
       // Max. Items
+      $i++;
       if ( $i >= $this->maxItems ) {
         break;
       }
