@@ -4,6 +4,7 @@ class MicroGallery {
   public $imgDir = 'img/';
   public $templDir = 'templates/';
   public $sortReverse = true;
+  public $maxItems = 10;
 
   function getImages() {
     $images = array();
@@ -26,11 +27,17 @@ class MicroGallery {
     $html = array();
     $templateItem = file_get_contents($this->templDir."imageItem.html");
     $images = $this->getImages();
+    $i = 0;
     foreach ( $images as $item ) {
       $tmp = $templateItem;
       $tmp = preg_replace("/\[\[image_path\]\]/", $this->imgDir.$item, $tmp);
       $tmp = preg_replace("/\[\[image_name\]\]/", $item, $tmp);
       $html[] = $tmp;
+
+      // Max. Items
+      if ( $i >= $this->maxItems ) {
+        break;
+      }
     }
     echo implode($html);
   }

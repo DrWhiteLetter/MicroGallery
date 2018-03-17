@@ -26,6 +26,10 @@
       <?php
       include __DIR__."/class/MicroGallery.php";
       $g = new MicroGallery();
+
+      // Options
+      $g->maxItems = 10; // Max. Items
+
       $g->showGallery();
       ?>
     </div>
