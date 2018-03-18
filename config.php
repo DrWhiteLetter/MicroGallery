@@ -1,6 +1,8 @@
 <?php
 
 return array(
+    'version' => '1.3',
+
     'page' => array(
       'title' => 'MicroGallery',
       'headline' => 'MicroGallery'
