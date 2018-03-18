@@ -17,22 +17,22 @@ include __DIR__."/class/MicroGallery.php";
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.js"></script>
 
-  <title><?=$configs->page->title?></title>
+  <title><?=$configs['page']['title']?></title>
 <head>
 <body>
 
   <div id="page" class="container">
 
     <!-- Headline -->
-    <h1><?=$configs->page->headline?></h1>
+    <h1><?=$configs['page']['headline']?></h1>
 
     <div class="row">
       <!-- Init and start the MicroGallery -->
       <?php
       $g = new MicroGallery();
       // Options
-      $g->maxItems = $configs->gallery->maxItems;
-      $g->sortReverse = $configs->gallery->sortReverse;
+      $g->maxItems = $configs['gallery']['maxItems'];
+      $g->sortReverse = $configs['gallery']['sortReverse'];
       $g->showGallery();
       ?>
     </div>
