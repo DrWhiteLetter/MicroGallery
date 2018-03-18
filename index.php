@@ -3,7 +3,7 @@ $configs = include('config.php');
 include __DIR__."/class/MicroGallery.php";
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,10 +21,14 @@ include __DIR__."/class/MicroGallery.php";
 <head>
 <body>
 
-  <div id="page" class="container">
+  <!-- Headline -->
+  <header class="fixed-top bg-dark">
+    <div class="container">
+      <h1><?=$configs['page']['headline']?></h1>
+    </div>
+  </header>
 
-    <!-- Headline -->
-    <h1><?=$configs['page']['headline']?></h1>
+  <div id="page" class="container">
 
     <div class="row">
       <!-- Init and start the MicroGallery -->
