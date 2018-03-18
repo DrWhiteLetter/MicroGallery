@@ -1,3 +1,8 @@
+<?php
+$configs = include('config.php');
+include __DIR__."/class/MicroGallery.php";
+?>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -12,24 +17,22 @@
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.js"></script>
 
-  <title>MicroGallery</title>
+  <title><?=$configs->page->title?></title>
 <head>
 <body>
 
   <div id="page" class="container">
 
     <!-- Headline -->
-    <h1>MicroGallery</h1>
+    <h1><?=$configs->page->headline?></h1>
 
     <div class="row">
       <!-- Init and start the MicroGallery -->
       <?php
-      include __DIR__."/class/MicroGallery.php";
       $g = new MicroGallery();
-
       // Options
-      $g->maxItems = 10; // Max. Items
-
+      $g->maxItems = $configs->gallery->maxItems;
+      $g->sortReverse = $configs->gallery->sortReverse;
       $g->showGallery();
       ?>
     </div>
