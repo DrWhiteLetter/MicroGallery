@@ -22,7 +22,7 @@ include __DIR__."/class/MicroGallery.php";
 <body>
 
   <!-- Headline -->
-  <header class="fixed-top bg-dark">
+  <header class="fixed-top">
     <div class="container">
       <h1><?=$configs['page']['headline']?></h1>
     </div>
