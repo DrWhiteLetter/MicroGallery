@@ -28,7 +28,7 @@ include __DIR__."/class/MicroGallery.php";
     </div>
   </header>
 
-  <div id="page" class="container">
+  <main role="main" id="page" class="container">
 
     <div class="row">
       <!-- Init and start the MicroGallery -->

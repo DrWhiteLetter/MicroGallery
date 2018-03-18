@@ -1,7 +1,11 @@
 #page {
-  padding-top:60px;
+  padding-top:90px;
 }
 
 .img-container {
   margin-bottom: 30px;
+}
+
+.bg-dark h1 {
+  color: #fff;
 }
