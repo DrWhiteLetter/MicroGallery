@@ -37,6 +37,9 @@ include __DIR__."/class/MicroGallery.php";
       // Options
       $g->maxItems = $configs['gallery']['maxItems'];
       $g->sortReverse = $configs['gallery']['sortReverse'];
+      $g->imgDir = $configs['gallery']['imgDir'];
+      $g->templDir = $configs['gallery']['templDir'];
+      
       $g->showGallery();
       ?>
     </div>

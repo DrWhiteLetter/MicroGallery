@@ -7,6 +7,8 @@ return array(
     ),
     'gallery' => array(
       'maxItems' => 10,
-      'sortReverse' => true
+      'sortReverse' => true,
+      'imgDir' => 'img/',
+      'templDir' => 'templates/'
     ),
 );

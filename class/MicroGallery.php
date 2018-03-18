@@ -36,7 +36,7 @@ class MicroGallery {
 
       // Max. Items
       $i++;
-      if ( $i >= $this->maxItems ) {
+      if ( $i >= $this->maxItems && $this->maxItems != 0 ) {
         break;
       }
     }
