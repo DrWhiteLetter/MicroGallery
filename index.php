@@ -13,6 +13,7 @@ include __DIR__."/class/MicroGallery.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Version: <?=$configs['version']?> -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -53,9 +54,6 @@ include __DIR__."/class/MicroGallery.php";
     </div>
   </div>
 
-  <footer class="pull-right">
-    <?=$configs['version']?>
-  </footer>
 
 </body>
 </html>
