@@ -1,5 +1,13 @@
 <?php
 $configs = include('config.php');
+if ( file_exists('configCust.php') ) {
+  $configsCust = include('configCust.php');
+  if ( is_array($configsCust) ) {
+    $configs = array_replace_recursive($configs, $configsCust);
+  } else {
+    // ToDo: Error handling
+  }
+}
 include __DIR__."/class/MicroGallery.php";
 ?>
 <!DOCTYPE html>
@@ -39,11 +47,15 @@ include __DIR__."/class/MicroGallery.php";
       $g->sortReverse = $configs['gallery']['sortReverse'];
       $g->imgDir = $configs['gallery']['imgDir'];
       $g->templDir = $configs['gallery']['templDir'];
-      
+
       $g->showGallery();
       ?>
     </div>
   </div>
+
+  <footer class="pull-right">
+    <?=$configs['version']?>
+  </footer>
 
 </body>
 </html>

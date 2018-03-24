@@ -1,5 +1,8 @@
 <?php
-
+/*
+Please don't change the config.
+Override the configuration in configCust.php
+*/
 return array(
     'version' => '1.3',
 
