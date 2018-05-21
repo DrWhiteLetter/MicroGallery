@@ -20,11 +20,11 @@ class MicroGallery {
         $times[] = filemtime($this->imgDir . '/' . $file);
       }
     }
-    if ( $this->sortReverse && !$this->$sortByTime ) {
+    if ( $this->sortReverse && !$this->sortByTime ) {
       $images = array_reverse($images);
     }
-    if ( $this->$sortByTime ) {
-      array_multisort($files, SORT_DESC, $times);
+    if ( $this->sortByTime ) {
+      array_multisort($images, SORT_DESC, $times);
     }
 
     return $images;
