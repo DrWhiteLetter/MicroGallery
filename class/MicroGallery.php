@@ -3,11 +3,13 @@
 class MicroGallery {
   public $imgDir = 'img/';
   public $templDir = 'templates/';
-  public $sortReverse = true;
+  public $sortReverse = false; // Nur wenn die Sortierung nicht nach der Zeit erfolgt!
+  public $sortByTime = true;
   public $maxItems = 10;
 
   function getImages() {
     $images = array();
+    $times = array();
     $dir = opendir($this->imgDir);
     $extensions = array("jpg", "bmp", "gif", "jpeg", "png");
 
@@ -15,11 +17,16 @@ class MicroGallery {
       $fExt = pathinfo($file, PATHINFO_EXTENSION);
       if ( in_array($fExt, $extensions) ) {
         $images[] = $file;
+        $times[] = filemtime($this->imgDir . '/' . $file);
       }
     }
-    if ( $this->sortReverse ) {
+    if ( $this->sortReverse && !$this->$sortByTime ) {
       $images = array_reverse($images);
     }
+    if ( $this->$sortByTime ) {
+      array_multisort($files, SORT_DESC, $times);
+    }
+
     return $images;
   }
 
